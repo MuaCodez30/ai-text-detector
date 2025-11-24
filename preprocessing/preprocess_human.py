@@ -3,8 +3,8 @@ import json
 import re
 import os
 
-INPUT_PATH = "data/raw/human.json"
-OUTPUT_PATH = "data/processed/human_clean.json"
+INPUT_PATH = "data/raw/human_extra.json"
+OUTPUT_PATH = "data/processed/human_clean_extra.json"
 
 def clean_text(text):
     """Clean article text: remove extra whitespace, HTML entities, and weird characters."""

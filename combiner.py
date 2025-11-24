@@ -2,10 +2,10 @@ import json
 from random import shuffle, sample
 
 # Load your human and AI articles
-with open("data/processed/human_clean.json", "r", encoding="utf-8") as f:
+with open("data/processed/human_clean_combined.json", "r", encoding="utf-8") as f:
     human_articles = json.load(f)
 
-with open("data/raw/ai.json", "r", encoding="utf-8") as f:
+with open("data/processed/ai_clean_combined.json", "r", encoding="utf-8") as f:
     ai_articles = json.load(f)
 
 # Downsample human articles to match AI count
@@ -21,7 +21,7 @@ dataset = human_labeled + ai_labeled
 shuffle(dataset)
 
 # Save combined dataset
-with open("data/processed/combined_dataset.json", "w", encoding="utf-8") as f:
+with open("data/combined/combined_dataset_new.json", "w", encoding="utf-8") as f:
     json.dump(dataset, f, ensure_ascii=False, indent=2)
 
 print(f"Combined dataset saved! Total articles: {len(dataset)}")

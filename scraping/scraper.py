@@ -180,13 +180,14 @@ if __name__ == "__main__":
     test_result = test_scraper()
 
     if test_result:
-        print("\n" + "=" * 50)
-        print("STARTING FULL SCRAPING 1000 ARTICLES...")
+        print("\n===================================")
+        print(" SCRAPING EXTRA 4000 HUMAN ARTICLES")
+        print("===================================\n")
         articles = scrape_range(
-            start_id=700000,          # newest 2018 article
-            end_id=690000,            # oldest in batch
-            target_count=1000,
-            save_path="data/raw/human.json"
+            start_id = 1300000,
+            end_id   = 660000,          # oldest in batch
+            target_count=10,
+            save_path="data/raw/human_test.json"
         )
     else:
         print("Scraper test failed. Please check the website structure.")
