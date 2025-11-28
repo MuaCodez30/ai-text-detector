@@ -7,8 +7,8 @@ import openai
 # -----------------------------
 # CONFIG
 # -----------------------------
-INPUT_PATH = "data/raw/sample_articles.json"  # your 4000 human articles
-OUTPUT_PATH = "data/raw/ai_sample_articles.json"    # where AI articles will be saved
+INPUT_PATH = "data/raw/human_combined.json"  # your 4000 human articles
+OUTPUT_PATH = "data/raw/ai.json"    # where AI articles will be saved
 MODEL = "gpt-3.5-turbo"                   # or "gpt-4" if available
 DELAY = 3  # seconds between requests
 MAX_RETRIES = 3
